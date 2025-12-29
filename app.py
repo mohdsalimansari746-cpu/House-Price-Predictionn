@@ -26,7 +26,7 @@ for i in final_X:
   result = st.sidebar.slider(f'Select {i} value',min_value,max_value)
   all_value.append(result)
 
-user_X=scaler.tranform([all_value])
+user_X=scaler.transform([all_value])
 @st.cache_data
 def ml_model(X,y):
   model = RandomForestRegressor()
@@ -44,6 +44,7 @@ st.success(f'Estimated House Price is: $ {final_price}')
 st.markdown('''**Design And Developed by: Salim Ansari**''')
 
   
+
 
 
 
